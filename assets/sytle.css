@@ -1,0 +1,14 @@
+.header {
+    color: aliceblue;
+    text-align: center;
+    align-items: end;
+    border: 2px solid black;
+    background: rgb(11, 111, 192);
+}
+
+.body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
