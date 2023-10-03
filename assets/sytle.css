@@ -1,14 +1,47 @@
-.header {
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
     color: aliceblue;
     text-align: center;
     align-items: end;
     border: 2px solid black;
     background: rgb(11, 111, 192);
+    padding: 10px;
+    text-align: center;
 }
 
-.body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+#search-container {
+    text-align: left;
+    margin-left: 10px;
+}
+
+#city-input {
+    padding: 5px;
+}
+
+#search-button {
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 75%;
+}
+
+#search-history {
+    margin-top: 20px;
+}
+/* im tring to get this to line up and be broken up into their cards */
+.card-5day {
+display: inline-block;
+width: 100%;
+height: 100px;
+padding: 5px;
+border: 1px solid blue;
+}
+
+.card-today{
+    align-items: center;
 }
