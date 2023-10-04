@@ -1,6 +1,6 @@
 var APIKey = "c2332ab353784f603d2622928b313f68";
 //https://api.openweathermap.org/data/2.5/weather?q=LasVegas&appid=c2332ab353784f603d2622928b313f68
-var baseUrl = 'https://api.openweathermap.org/data/2.5/weather'
+var baseUrl = 'https://api.openweathermap.org/data/2.5'
 
 const cityInput = document.getElementById('city-input');
 const searchButton = document.getElementById('search-button');
@@ -10,7 +10,7 @@ const forecast = document.getElementById('forecast');
 
 // Function to fetch weather data from an API
  function fetchWeatherData(city) {
-    var queryURL = baseUrl + '?q=' + city + "&appid=" + APIKey;
+    var queryURL = baseUrl + '/weather?q=' + city + '&appid=' + APIKey;
 
     fetch(queryURL).then((response) => {
         console.log(response)
@@ -20,6 +20,20 @@ const forecast = document.getElementById('forecast');
             document.getElementById('todayTemp').innerHTML = data.main.temp
             document.getElementById('todayHumidity').innerHTML = data.main.humidity
             document.getElementById('todayWind').innerHTML = data.wind.speed
+        });
+        
+        
+    });
+}
+
+function fetchForecast(lat,lon){
+    var queryURL = baseUrl + '/forecast/daily?lat=' + lat + '&lon=' + lon + '&cnt=5&appid=' + APIKey;
+
+    fetch(queryURL).then((response) => {
+        console.log(response)
+        response.json().then((data) => {
+            console.log(data);
+            
         });
         
         
