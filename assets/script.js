@@ -16,12 +16,12 @@ const forecast = document.getElementById('forecast');
         console.log(response)
         response.json().then((data) => {
             console.log(data);
-            document.getElementById('searchedCity').innerHTML = 'test'
-            document.getElementById('todayTemp').innerHTML = 'test'
-            document.getElementById('todayHumidity').innerHTML = 'test'
-            document.getElementById('todayWind').innerHTML = 'test'
+            document.getElementById('searchedCity').innerHTML = data.name
+            document.getElementById('todayTemp').innerHTML = data.main.temp
+            document.getElementById('todayHumidity').innerHTML = data.main.humidity
+            document.getElementById('todayWind').innerHTML = data.wind.speed
         });
-        weatherToday = document.getElementById('weather-today')
+        
         
     });
 }
